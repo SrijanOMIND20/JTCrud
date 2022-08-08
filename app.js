@@ -2,8 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const router = require('./routes/studentRT');
+const cors=require('cors');
 
 require('dotenv').config();
+app.use(cors());
 
 
 mongoose.connect(process.env.DATABASE_URL,
