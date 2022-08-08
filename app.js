@@ -22,6 +22,6 @@ app.get('/',(req,res)=>{
 
 app.use('/api',router);
 
-port = 4000 || process.env.PORT;
+port = process.env.PORT ||4000;
 
 app.listen(port,()=>{console.log(`App Running on port ${port}`)});
